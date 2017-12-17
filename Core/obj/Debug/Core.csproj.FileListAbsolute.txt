@@ -1,0 +1,7 @@
+c:\users\vasile catana\documents\visual studio 2017\Core\bin\Debug\Core.dll
+c:\users\vasile catana\documents\visual studio 2017\Core\bin\Debug\Core.pdb
+c:\users\vasile catana\documents\visual studio 2017\Core\bin\Debug\Ardalis.GuardClauses.dll
+c:\users\vasile catana\documents\visual studio 2017\Core\obj\Debug\Core.csprojResolveAssemblyReference.cache
+c:\users\vasile catana\documents\visual studio 2017\Core\obj\Debug\Core.csproj.CoreCompileInputs.cache
+c:\users\vasile catana\documents\visual studio 2017\Core\obj\Debug\Core.dll
+c:\users\vasile catana\documents\visual studio 2017\Core\obj\Debug\Core.pdb
