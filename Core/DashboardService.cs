@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Core.Interfaces;
 using Ardalis.GuardClauses;
-
+using Core.Model;
 
 namespace Core.Services
 {
@@ -23,7 +23,7 @@ namespace Core.Services
         {
             var dashboard = await userDashboards.GetByIdAsync(userID);
 
-            dashboard.AddSolution(new Entities.Solution(submissionId));
+            //dashboard.AddSolution(new Solution(submissionId));
 
             await userDashboards.UpdateAsync(dashboard);
         }

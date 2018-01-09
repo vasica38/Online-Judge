@@ -1,4 +1,4 @@
-﻿using Core.Entities;
+﻿using Core.Model;
 using Core.Interfaces;
 using System;
 using System.Collections.Generic;

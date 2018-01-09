@@ -187,10 +187,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="Class2.cs" />
-    <Compile Include="Data\EfRepository.cs" />
-    <Compile Include="Data\JudgeContext.cs" />
     <Compile Include="Identity\AppIdentityDbContext.cs" />
     <Compile Include="Identity\ApplicationUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -199,6 +195,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Data\" />
     <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
