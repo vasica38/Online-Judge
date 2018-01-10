@@ -1,0 +1,102 @@
+﻿@model Judge.Models.ProblemEntity
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>@Html.DisplayFor(model => model.Name)
+
+
+</h2>
+
+
+<div class="container">
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Name)
+    </div>
+    <div class="panel-body news-content editor-label">
+        @Model.Name
+    </div>
+    <br />
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.TymeLimitMs)
+    </div>
+    <div class="editor-label">
+        @Html.DisplayFor(model => model.TymeLimitMs)
+    </div>
+    <br />
+
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.MemoryLimitKb)
+    </div>
+
+    <div class="panel-body news-content editor-label">
+        @Model.MemoryLimitKb
+    </div>
+
+    <br />
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Author)
+    </div>
+
+    <div class="panel-body news-content editor-label">
+        @Model.Author
+    </div>
+
+    <br />
+
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Text)
+    </div>
+
+    <div class="panel-body news-content editor-label">
+        @Model.Text
+    </div>
+
+    <br />
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.In)
+    </div>
+
+    <div class="panel-body news-content editor-label">
+        @Model.In
+    </div>
+
+    <br />
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Out)
+    </div>
+
+    <div class="panel-body news-content editor-label">
+        @Model.Out
+    </div>
+
+    <br />
+
+    <a href="@Url.Action("Submit", "Submission", new { submissionProblemId = Model.Id })" , <span class="glyphicon glyphicon-circle-arrow-up" </span> Submit </a>
+
+
+    <div class="editor-label" >
+        <input type="button" class="btn btn-info" value="Submissions" onclick="location.href = 'http:\\www.google.com';">
+
+     </div>
+
+
+    <div class="editor-label">
+        Your score : 100
+    </div>S
+</div>
+
+
+
+
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
