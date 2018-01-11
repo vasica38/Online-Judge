@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Judge.Models.ProblemEntity>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+       
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>           
+            <a href="@Url.Action("Details", "Problem", new { id =  @Html.DisplayFor(modelItem => item.Id) })"> @Html.DisplayFor(modelItem => item.Name)</a>
+        </td>
+     
+    </tr>
+}
+
+</table>

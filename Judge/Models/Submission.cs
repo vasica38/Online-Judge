@@ -19,7 +19,7 @@ namespace Judge.Models
         public string Language { get; set; }
 
         [Required]
-        public int SubmissionAccountId { get; set; }
+        public string SubmissionAccountId { get; set; }
 
         [Required]
         public int SubmissionProblemId { get; set; }

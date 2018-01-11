@@ -1,4 +1,5 @@
 ﻿using Judge.Models;
+using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,14 +8,23 @@ using System.Web.Mvc;
 
 namespace Judge.Controllers
 {
+    [Authorize]
     public class ProblemController : Controller
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
-
         // GET: Problem
+        ApplicationDbContext db = new ApplicationDbContext();
+
         public ActionResult Index()
         {
-            return View();
+            if (db.ProblemEntities.ToList()!=null)
+            {
+                return View(db.ProblemEntities.ToList());
+
+            }
+            else
+            {
+                return HttpNotFound("No problems");
+            }
         }
 
         // GET: Problem/Details/5
@@ -52,8 +62,24 @@ namespace Judge.Controllers
             try
             {
                 // TODO: Add insert logic here
+                var db = new ApplicationDbContext();
 
-                return RedirectToAction("Index");
+                ProblemEntity problem = new ProblemEntity
+                {
+                    Author = collection["Author"],
+                    In = collection["In"],
+                    Out = collection["Out"],
+                    MemoryLimitKb = Int32.Parse(collection["MemoryLimitKb"].ToString()),
+                    TymeLimitMs = Int32.Parse(collection["TymeLimitMs"].ToString()),
+                    Name = collection["Name"],
+                    Text = collection["Text"],
+                    ApplicationUserId = User.Identity.GetUserId()
+                };
+
+                db.ProblemEntities.Add(problem);
+                db.SaveChanges();
+
+                return RedirectToAction("Details", new { id = problem.Id } );
             }
             catch
             {

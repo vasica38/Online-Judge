@@ -276,7 +276,9 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Problem\Details.cshtml" />
     <Content Include="Views\Problem\Create.cshtml" />
-    <Content Include="Views\Submission\Submit.cshtml" />
+    <Content Include="Views\Problem\Index.cshtml" />
+    <Content Include="Views\Submission\Create.cshtml" />
+    <Content Include="Views\Submission\All.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
