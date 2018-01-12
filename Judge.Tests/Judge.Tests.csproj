@@ -105,9 +105,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Judge\Judge.csproj">
+    <ProjectReference Include="..\Judge\Web.csproj">
       <Project>{A935CA80-2E7C-42E9-916A-201D2883871D}</Project>
-      <Name>Judge</Name>
+      <Name>Web</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
