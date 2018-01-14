@@ -22,3 +22,125 @@ select,
 textarea {
     max-width: 280px;
 }
+
+
+
+.center-page {
+    width: 900px;
+    height: 150px;
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+.btn-signup {
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 8px;
+    color: #ddd;
+    width: 200px;
+    line-height: 90px;
+    float: left;
+}
+
+.btn-login {
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    border-radius: 8px;
+    color: #ddd;
+    width: 200px;
+    line-height: 90px;
+    float: right;
+}
+
+
+.boxx {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-weight: bold;
+    font-size: 300%;
+    text-align: center;
+    display: inline;
+}
+
+.small-space-vert {
+    margin-top: 10px;
+}
+
+.space-vert {
+    margin-top: 20px;
+}
+
+.space-vert-button {
+    margin-top: 30px;
+}
+
+
+.space-vert-title {
+    margin-bottom: 35px;
+}
+
+.center-page-signup {
+    width: 350px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    bottom: 90px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+.center-page-login {
+    width: 350px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    bottom: 150px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+.title-signup-login {
+    font-size: 250%;
+    font-weight: bold;
+    text-align: center;
+    padding-right: 50px;
+}
+
+.another-service {
+    text-align: center;
+}
+/* PAAAAAAAAAANAAAAAAAAAAAAAAAAAA AIIIIIIIIIIIIIIICIIIIIIIIIIIIIIIIIIIIIII un COMMIT signup aside LOGIN */
+
+
+.footer-pos {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 650px;
+    bottom: 0;
+    left: 0: right: 0;
+}
+
+
+.judge-font {
+    font-size: 210%;
+    font-weight: bold;
+    font-family: "Georgia";
+}
+
+
+.menu-font {
+    font-size: 125%;
+    font-family: "Georgia";
+}
