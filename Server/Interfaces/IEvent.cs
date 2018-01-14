@@ -7,9 +7,8 @@ namespace Server.Interfaces
     public interface IEvent
     {
         //SubscriptionToken Subscribe<TEventBase>(Action<TEventBase> action) where TEventBase : EventBase;
-
-
-
+        void Subscribe(string data);
+        void Notify();
 
     }
 }

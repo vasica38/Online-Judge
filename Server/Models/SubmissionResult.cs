@@ -12,6 +12,7 @@ namespace Server.Models
         public int StatusId { get; set; }
         public int Time { get; set; }
         public int Memory { get; set; }
+        public int Score { get; set; }
         public System.DateTime EvalTime { get; set; }
     }
 }

@@ -6,7 +6,7 @@ namespace Server.Models
 {
     public class Execution
     {
-        public Execution(bool hasTerminated, bool totalMs, double usedMemoryKBs, string output, bool hasOutputFile)
+        public Execution(bool hasTerminated, int totalMs, double usedMemoryKBs, string output, bool hasOutputFile)
         {
             HasTerminated = hasTerminated;
             TotalMs = totalMs;
@@ -16,7 +16,7 @@ namespace Server.Models
         }
 
         public bool HasTerminated { get; set; }
-        public bool TotalMs { get; set; }
+        public int TotalMs { get; set; }
         public double UsedMemoryKBs { get; set; }
         public string Output { get; set; }
         public bool HasOutputFile { get; set; }
