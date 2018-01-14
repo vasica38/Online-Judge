@@ -3,18 +3,16 @@
 }
 
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Register</h2>
-        <p>
-            Create an account and start submitting.
-        </p>
-        <p>@Html.ActionLink("Register", "Register", "Account", null, new { @class = "btn btn-default" })  </p>
-    </div>
-    <div class="col-md-4">
-        <h2>Login</h2>
-        <p>Access your account</p>
-        <p>@Html.ActionLink("Log In", "Login", "Account", null, new { @class = "btn btn-default" }) </p>
+<body style="background: url(https://wallpaperscraft.com/image/laptop_cup_glasses_plant_114948_1920x1080.jpg); background-size: 100%;">
+
+    <div class="center-page">
+        <div class="boxx">
+            @Html.ActionLink("Sign Up", "Register", "Account", null, new { @class = "btn-signup" })
+        </div>
+
+        <div class="boxx">
+            @Html.ActionLink("Log In", "Login", "Account", null, new { @class = "btn-login" })
+        </div>
     </div>
 
-</div>
+</body>
