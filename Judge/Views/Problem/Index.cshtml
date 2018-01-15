@@ -4,28 +4,46 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
 
-<h2>Index</h2>
+<body>
 
+<h2><font face="Helvetica"><b>Problems</b></font></h2>
+<hr/>
 <p>
-    @Html.ActionLink("Create New", "Create")
+    <button type="button" class="btn btn-success">@Html.ActionLink("Create New", "Create",null, new { @class = "my-class" })</button>
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-       
-        <th></th>
-    </tr>
+<br/>
+<div class ="container">
+<table class="table table-striped">
+   
 
 @foreach (var item in Model) {
     <tr>
         <td>           
-            <a href="@Url.Action("Details", "Problem", new { id =  @Html.DisplayFor(modelItem => item.Id) })"> @Html.DisplayFor(modelItem => item.Name)</a>
+            <font font-family="Whitney SSm A", Whitney SSm B, AvenirNext-Regular, Segoe UI, Ubuntu, Helvetica Neue, Helvetica, Arial, sans-serif; size="4">
+                
+                <a href="@Url.Action("Details", "Problem", new {id = @Html.DisplayFor(modelItem => item.Id)})"><font color="#00cc00"> @Html.DisplayFor(modelItem => item.Name)</font></a>
+            </font>
+            <div align="right" >
+                <button type="button" class="btn btn-success btn-sm"><a href="@Url.Action("Details", "Problem", new { id =  @Html.DisplayFor(modelItem => item.Id) })"> <font color="white">Solve Challenge</font></a></button>
+            </div>
         </td>
      
     </tr>
 }
 
 </table>
+</div>
+
+
+
+
+</body>

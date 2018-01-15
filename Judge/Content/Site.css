@@ -20,5 +20,274 @@
 input,
 select,
 textarea {
-    max-width: 280px;
+    max-width: 500px;
+}
+
+ 
+table, td, th {
+    border: 2px solid #ddd;
+    text-align: left;
+}
+ 
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+ 
+th, td {
+    padding: 15px;
+}
+h2.uppercase {
+    text-transform: uppercase;
+}
+ 
+/*Contact sectiom*/
+.content-header{
+    font-family: 'Oleo Script', cursive;
+    color:#fcc500;
+    font-size: 45px;
+}
+ 
+.section-content{
+    text-align: center; 
+ 
+}
+#contact{
+ 
+    font-family: 'Teko', sans-serif;
+    padding-top: 60px;
+    width: 100%;
+    width: 100vw;
+    height: 550px;
+    background: #3a6186; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #3a6186 , #89253e); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #3a6186 , #89253e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color : #fff;    
+}
+.contact-section{
+    padding-top: 40px;
+}
+.contact-section .col-md-6{
+    width: 50%;
+}
+ 
+.form-line{
+    border-right: 1px solid #B29999;
+}
+ 
+.form-group{
+    margin-top: 10px;
+}
+label{
+    font-size: 1.3em;
+    line-height: 1em;
+    font-weight: normal;
+}
+.form-control{
+    font-size: 1.3em;
+    color: #080808;
+}
+
+
+.center-page {
+    width: 900px;
+    height: 150px;
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+.btn-signup {
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 8px;
+    color: #ddd;
+    width: 200px;
+    line-height: 90px;
+    float: left;
+}
+
+.btn-login {
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    border-radius: 8px;
+    color: #ddd;
+    width: 200px;
+    line-height: 90px;
+    float: right;
+}
+
+
+.boxx {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-weight: bold;
+    font-size: 300%;
+    text-align: center;
+    display: inline;
+}
+
+.small-space-vert {
+    margin-top: 10px;
+}
+
+.space-vert {
+    margin-top: 20px;
+}
+
+.space-vert-button {
+    margin-top: 30px;
+}
+
+
+.space-vert-title {
+    margin-bottom: 35px;
+}
+
+.center-page-signup {
+    width: 350px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    bottom: 90px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+.center-page-login {
+    width: 350px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    bottom: 150px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+.title-signup-login {
+    font-size: 250%;
+    font-weight: bold;
+    text-align: center;
+    padding-right: 50px;
+}
+
+.another-service {
+    text-align: center;
+}
+/* PAAAAAAAAAANAAAAAAAAAAAAAAAAAA AIIIIIIIIIIIIIIICIIIIIIIIIIIIIIIIIIIIIII un COMMIT signup aside LOGIN */
+
+
+.footer-pos {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 650px;
+    bottom: 0;
+    left: 0: right: 0;
+}
+
+
+.judge-font {
+    font-size: 210%;
+    font-weight: bold;
+    font-family: "Georgia";
+}
+
+
+.menu-font {
+    font-size: 125%;
+    font-family: "Georgia";
+}
+
+
+.pass-confirm-title {
+    top: 120px;
+    float: left;
+    position: absolute;
+    font-size: 250%;
+    font-weight: bold;
+}
+
+
+.pass-confirm-message {
+    top: 175px;
+    float: left;
+    position: absolute;
+    font-size: 130%;
+    font-weight: bold;
+    -webkit-text-size-adjust: none;
+}
+
+
+.center-page-change-password {
+    width: 600px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    bottom: 90px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+.title-changePass {
+    font-size: 220%;
+    font-weight: bold;
+    text-align: center;
+    padding-right: 30px;
+}
+
+
+.set-pass-message {
+    top: 175px;
+    position: absolute;
+    font-size: 140%;
+    font-weight: bold;
+    -webkit-text-size-adjust: none;
+}
+
+.fgtpwdbody {
+    background-color:#333;
+    margin-top:18px
+}
+ 
+.fgtpwdcontainer {
+    padding:33px;
+    background-color: #fff;
+}
+a.my-class {
+    color: #ffffff;
+}
+fontinout {
+    font-weight: 900;
+}
+
+
+textarea.form-control {
+    height: 135px;
+    max-width: 300px;
+    /* margin-top: px;*/
+}
+textarea.form-controlmare {
+    height: 135px;
+    /* margin-top: px;*/
+}
+.submit{
+    font-size: 1.1em;
+    float: right;
+    width: 150px;
+    background-color: transparent;
+    color: #fff;
+ 
 }

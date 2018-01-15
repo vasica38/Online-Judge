@@ -3,100 +3,72 @@
 @{
     ViewBag.Title = "Details";
 }
-
-<h2>@Html.DisplayFor(model => model.Name)
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color: #ffffff">
+<h2>
+    <center><font face="helvetica" size="6">@Html.DisplayFor(model => model.Name)</font></center>
 
 
 </h2>
+<p><center>Memory Limit Kb: @Model.MemoryLimitKb</center></p>
+<p><center>Execution Time Limit: @Model.TymeLimitMs</center></p>
+<p><center>Author: @Model.Author</center></p>
+<br/>
+    <h>
+        <button type="button" class="btn btn-success"><a href="@Url.Action("Create", "Submission", new {submissionProblemId = Model.Id})"><font color="white">Submit code</font></a></button>
+        <span style="float:right;"><input type="button" class="btn btn-success" value="Submissions" onclick="location.href = 'http:\\www.google.com';"></span>
+</h>
 
-
-<div class="container">
-
-    <div class="editor-label">
-        @Html.LabelFor(model => model.Name)
-    </div>
-    <div class="panel-body news-content editor-label">
-        @Model.Name
-    </div>
-    <br />
-
-    <div class="editor-label">
-        @Html.LabelFor(model => model.TymeLimitMs)
-    </div>
-    <div class="editor-label">
-        @Html.DisplayFor(model => model.TymeLimitMs)
-    </div>
-    <br />
-
-
-    <div class="editor-label">
-        @Html.LabelFor(model => model.MemoryLimitKb)
-    </div>
-
-    <div class="panel-body news-content editor-label">
-        @Model.MemoryLimitKb
-    </div>
-
-    <br />
-
-    <div class="editor-label">
-        @Html.LabelFor(model => model.Author)
-    </div>
-
-    <div class="panel-body news-content editor-label">
-        @Model.Author
-    </div>
-
-    <br />
-
-
-    <div class="editor-label">
-        @Html.LabelFor(model => model.Text)
-    </div>
-
-    <div class="panel-body news-content editor-label">
-        @Model.Text
-    </div>
-
-    <br />
-
-    <div class="editor-label">
-        @Html.LabelFor(model => model.In)
-    </div>
-
-    <div class="panel-body news-content editor-label">
-        @Model.In
-    </div>
-
-    <br />
-
-    <div class="editor-label">
-        @Html.LabelFor(model => model.Out)
-    </div>
-
-    <div class="panel-body news-content editor-label">
-        @Model.Out
-    </div>
-
-    <br />
-
-    <a href="@Url.Action("Create", "Submission", new { submissionProblemId = Model.Id })" , <span class="glyphicon glyphicon-circle-arrow-up" </span> Submit </a>
-
-
-    <div class="editor-label" >
-        <input type="button" class="btn btn-info" value="Submissions" onclick="location.href = 'http:\\www.google.com';">
-
-     </div>
-
-
-    <div class="editor-label">
-        Your score : 100
-    </div>S
+<hr/>
+<div>
+    @Html.LabelFor(model => model.Text)
 </div>
+<br/>
+<li>
+@Model.Text
+</li>
+<br/>
+<div class ="container">
+    <p><b>Examples</b></p>
+    <table class="table table-striped">
+        <tr>
+            <th>
+                <fontinout><font face="Courier New" size="2">input</font></fontinout>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <fontinout><font face="Courier New" size="2">@Model.In</font></fontinout>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <fontinout><font face="Courier New" size="2">output</font></fontinout>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <fontinout><font face="Courier New" size="2">@Model.Out</font></fontinout>
+            </td>
+        </tr>
+    </table>
+</div>
+<br/>
 
 
+<span style="float:right">
+    Your score : 100
+</span>
 
 
-<p>
+<p2>
     @Html.ActionLink("Back to List", "Index")
-</p>
+</p2>
+</body>
