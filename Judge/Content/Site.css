@@ -163,3 +163,32 @@ textarea {
     font-weight: bold;
     -webkit-text-size-adjust: none;
 }
+
+
+.center-page-change-password {
+    width: 600px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    bottom: 90px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+.title-changePass {
+    font-size: 220%;
+    font-weight: bold;
+    text-align: center;
+    padding-right: 30px;
+}
+
+
+.set-pass-message {
+    top: 175px;
+    position: absolute;
+    font-size: 140%;
+    font-weight: bold;
+    -webkit-text-size-adjust: none;
+}
