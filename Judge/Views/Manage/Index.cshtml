@@ -18,7 +18,7 @@
                         <div class="col-lg-12">
                             <div class="row">
                                 <div class="col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6">
-                                    <img class="img-circle img-responsive" src="http://www.sin-hosting.com/images/profile/profile_5991f8e7507ba.jpg">
+                                    <img class="img-circle img-responsive" src="http://www.lovemarks.com/wp-content/uploads/profile-avatars/default-avatar-ginger-guy.png">
                                 </div>
                             </div>
                         </div>
@@ -28,27 +28,30 @@
                             <div class="row">
                                 <div class="centered-text col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6">
                                     <div itemscope="" itemtype="http://schema.org/Person">
-                                        <h2>
-                                            <span itemprop="name">Your Name</span>
-                                        </h2>
-                                        <dt>Password:</dt>
-                                        <dd>
-                                            [
-                                            @if (Model.HasPassword)
-                                            {
-                                                @Html.ActionLink("Change your password", "ChangePassword")
-                                            }
-                                            else
-                                            {
-                                                @Html.ActionLink("Create", "SetPassword")
-                                            }
-                                            ]
-                                        </dd>
-                                        <dt>External Logins:</dt>
-                                        <dd>
-                                            @Model.Logins.Count [
-                                            @Html.ActionLink("Manage", "ManageLogins") ]
-                                        </dd>
+                                        <hr/>
+                                        <b> Password: </b>
+                                        [
+                                        @if (Model.HasPassword)
+                                        {
+                                            @Html.ActionLink("Change your password", "ChangePassword")
+                                        }
+                                        else
+                                        {
+                                            @Html.ActionLink("Create", "SetPassword")
+                                        }
+                                        ]
+                                        <br/>
+                                        <b>External Logins:</b>
+                                        
+                                        @Model.Logins.Count [
+                                        @Html.ActionLink("Manage", "ManageLogins") ]
+                                        <hr/>
+                                        <button type="button" class="btn btn-success">@Html.ActionLink("Solve", "../Problem/Index",null, new { @class = "my-class" })</button>
+                                       
+                                        
+                                        
+
+                                        <button type="button" class="btn btn-success" style="float: right">@Html.ActionLink("Submissions", "../Submission/All",null, new { @class = "my-class" })</button>
 
                                     </div>
                                 </div>
