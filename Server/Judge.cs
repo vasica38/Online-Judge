@@ -37,6 +37,16 @@ namespace Server
             EvaluationPath = evaluationPath;
             GccCompilerPath = gccCompilerPath;
             this.repository = repository;
+            EvaluationDirectory = new DirectoryInfo(evaluationPath);
+            SubmissionsDirectory = new DirectoryInfo(EvaluationPath + "\\Submissions");
+            TestsDirectory = new DirectoryInfo(EvaluationPath + "\\Tests");
+            WorkAreaDirectory = new DirectoryInfo(EvaluationPath + "\\Workarea");
+            worker = new CheckSubmission("B:\\workarea", "B:\\workarea", "B:\\workarea");
+        }
+
+        public void SetSubmissionPath(Dictionary<int, string> submissionsPaths)
+        {
+            this.submissionsPaths = submissionsPaths;
         }
 
         public void Evaluate(SubmissionJson submission )
@@ -51,13 +61,20 @@ namespace Server
             {
                 if (compiler.Compile(submissionsPaths[submission.Id], out executablePath))
                 {
-                    testsFolder = TestsDirectory.FullName + "\\" + submission.SubmissionProblemId + "\\";
-                    File.Copy(executablePath, WorkAreaDirectory.FullName + "\\" + submission.SubmissionProblemId + Constants.exe, true);
+
+                    testsFolder = @"b:\tests\adunare";
+                    File.Copy(executablePath, @"b:\tests\adunare\a.exe", true);
 
 
                     foreach(var test in repository.Tests)
                     {
-
+                        ProblemTest problemTest = new ProblemTest()
+                        {
+                            Id = test.Id,
+                            Name = test.Name,
+                            Data = test.Data
+                        };
+                        Execution execution = worker.Execute2(@"b:\tests\adunare", problemTest, null);
                     }
                 }
             }

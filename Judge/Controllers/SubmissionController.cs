@@ -65,6 +65,26 @@ namespace Judge.Controllers
                     Score = -1
                 };
 
+                string problemName = null;
+
+                for(int i = 0; i < db.ProblemEntities.ToList().Count; ++i)
+                {
+                    if (db.ProblemEntities.ToList()[i].Id == submission.SubmissionProblemId)
+                    {
+                        problemName = db.ProblemEntities.ToList()[i].Name;
+                        break;
+                    }
+                }
+
+                if (null == problemName)
+                {
+                    problemName = "unknown";
+                }
+                else
+                {
+                    submission.ProblemName = problemName;
+                }
+
                 SendShit(submission);
 
                 db.Submissions.Add(submission);

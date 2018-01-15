@@ -9,8 +9,7 @@ namespace Server.Models
         public int Id { get; set; }
         public int ProblemId { get; set; }
         public string Name { get; set; }
-        public string InLocation { get; set; }
-        public string OutLocation { get; set; }
+        public string Data { get; set; }
         public int Score { get; set; }
     }
 }

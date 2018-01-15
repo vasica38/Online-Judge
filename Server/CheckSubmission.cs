@@ -83,7 +83,7 @@ namespace Server
             try
             {
                 CopyTestToWorkArea(testsPath + test.Name + Constants.In, problem);
-                ProcessStartInfo psi = new ProcessStartInfo(workingPath + problem.Name + Constants.exe);
+                ProcessStartInfo psi = new ProcessStartInfo(@"b:\tests\adunare\a" + Constants.exe);
                 psi.WorkingDirectory = workingPath;
                 psi.UseShellExecute = false;
                 psi.CreateNoWindow = true;

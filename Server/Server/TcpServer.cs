@@ -47,7 +47,7 @@ namespace Server.Server
                 }
             }
 
-            IPAddress ipAddress = IPAddress.Parse("192.168.1.5");
+            IPAddress ipAddress = IPAddress.Any;
 
             IPEndPoint localEndPoint = new IPEndPoint(ipAddress, 11000);
 
@@ -141,6 +141,7 @@ namespace Server.Server
 
                 // Complete sending the data to the remote device.  
                 int bytesSent = handler.EndSend(ar);
+                Send(handler, "received");
                 Console.WriteLine("Sent {0} bytes to client.", bytesSent);
 
                 handler.Shutdown(SocketShutdown.Both);

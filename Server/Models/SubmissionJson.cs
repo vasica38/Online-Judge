@@ -17,6 +17,8 @@ namespace Server.Models
         public string SubmissionAccountId { get; set; }
 
         public int SubmissionProblemId { get; set; }
+
+        public string ProblemName { get; set; }
     }
     
 }

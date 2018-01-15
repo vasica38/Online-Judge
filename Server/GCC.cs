@@ -25,8 +25,9 @@ namespace Server
             }
 
             psi.FileName = path;
-            psi.Arguments = "-o " + parts[0] + " " + sourcePath;
-            psi.UseShellExecute = false;
+            psi.Arguments = sourcePath;
+            psi.WorkingDirectory = Path.GetDirectoryName(sourcePath);
+            psi.UseShellExecute = true;
             psi.CreateNoWindow = true;
             var p = Process.Start(psi);
             p.WaitForExit(3459);
@@ -36,7 +37,7 @@ namespace Server
                 p.Kill();
             }
 
-            executablePath = sourcePath.Remove(sourcePath.LastIndexOf('.')) + ".exe";
+            executablePath = Path.GetDirectoryName(sourcePath) + "\\" + "a.exe";
             return File.Exists(executablePath);
         }
 

@@ -23,5 +23,8 @@ namespace Judge.Models
 
         [Required]
         public int SubmissionProblemId { get; set; }
+
+        [Required]
+        public string ProblemName { get; set; }
     }
 }
