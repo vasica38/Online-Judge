@@ -110,7 +110,6 @@ label{
     color: #ddd;
     width: 200px;
     line-height: 90px;
-    float: left;
 }
 
 .btn-login {
@@ -126,11 +125,12 @@ label{
 
 
 .boxx {
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: "Georgia";
     font-weight: bold;
     font-size: 300%;
     text-align: center;
-    display: inline;
+    padding-top: 45px;
+    color: #1b1616;
 }
 
 .small-space-vert {
@@ -290,4 +290,24 @@ textarea.form-controlmare {
     background-color: transparent;
     color: #fff;
  
+}
+
+
+.box1 {
+    font-family: "Georgia";
+    font-weight: bold;
+    font-size: 570%;
+    text-align: center;
+    padding-top: 55px;
+}
+
+
+.btn-start-code {
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    color: #333;
+    width: 400px;
+    line-height: 90px;
+    top: 180px;
 }
