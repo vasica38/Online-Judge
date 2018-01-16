@@ -10,10 +10,12 @@ namespace Server
     {
         static void Main(string[] args)
         {
-            //EventQueue events = new EventQueue();
-            //TcpServer.Queue = events;
+            EventQueue events = new EventQueue();
+            TcpServer.Queue = events;
 
             TcpServer.Start();
+
+            /*
             LoadTests loader = new LoadTests();
             List<Test> tests = new List<Test>();
             List<Test> tests1 = new List<Test>();
@@ -58,7 +60,7 @@ namespace Server
 
 
 
-
+    */
         Console.Read();
            
         }

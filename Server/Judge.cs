@@ -61,7 +61,7 @@ namespace Server
             {
                 if (compiler.Compile(submissionsPaths[submission.Id], out executablePath))
                 {
-
+                    Console.WriteLine("Source successfully compiled");
                     testsFolder = @"b:\tests\adunare";
                     File.Copy(executablePath, @"b:\tests\adunare\a.exe", true);
 
@@ -76,6 +76,11 @@ namespace Server
                         };
                         Execution execution = worker.Execute2(@"b:\tests\adunare", problemTest, null);
                     }
+                }
+                else
+                {
+                    Console.WriteLine("Source has compiled with errors");
+                    
                 }
             }
 

@@ -15,7 +15,6 @@ namespace Server.Server
         public const int BufferSize = 1024;
         public byte[] buffer;
         public StringBuilder sb;
-
         public StateObject()
         {
             this.socket = null;
@@ -28,8 +27,12 @@ namespace Server.Server
     {
         public static ManualResetEvent allDone = new ManualResetEvent(false);
         public static EventQueue Queue { set; get; }
+        private static  SubmissionResult submission = new SubmissionResult();
+
+
         public TcpServer()
         {
+            //this.submission = 
         }
 
         public static void Start()
@@ -47,7 +50,7 @@ namespace Server.Server
                 }
             }
 
-            IPAddress ipAddress = IPAddress.Any;
+            IPAddress ipAddress = IPAddress.Parse("127.0.0.1");
 
             IPEndPoint localEndPoint = new IPEndPoint(ipAddress, 11000);
 
@@ -141,7 +144,7 @@ namespace Server.Server
 
                 // Complete sending the data to the remote device.  
                 int bytesSent = handler.EndSend(ar);
-                Send(handler, "received");
+                Send(handler, submission.Score.ToString());
                 Console.WriteLine("Sent {0} bytes to client.", bytesSent);
 
                 handler.Shutdown(SocketShutdown.Both);

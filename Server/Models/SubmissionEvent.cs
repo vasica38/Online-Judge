@@ -8,7 +8,7 @@ namespace Server.Models
 {
     public class SubmissionEvent : IEvent
     {
-        private SubmissionJson submission;
+        public SubmissionJson Submission { get; set;  }
         private EventQueue eventQueue;
         public SubmissionEvent(EventQueue eventQueue)
         {
@@ -22,7 +22,7 @@ namespace Server.Models
 
         public void Subscribe(string data)
         {
-            submission = JsonDeserializer.Deserialize(data);
+            Submission = JsonDeserializer.Deserialize(data);
         }
     }
 }

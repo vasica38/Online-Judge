@@ -281,6 +281,8 @@
     <Content Include="Views\Problem\Index.cshtml" />
     <Content Include="Views\Submission\Create.cshtml" />
     <Content Include="Views\Submission\All.cshtml" />
+    <Content Include="Views\Submission\Problem.cshtml" />
+    <Content Include="Views\Submission\View.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -23,7 +23,8 @@
 <br/>
     <h>
         <button type="button" class="btn btn-success"><a href="@Url.Action("Create", "Submission", new {submissionProblemId = Model.Id})"><font color="white">Submit code</font></a></button>
-        <span style="float:right;"><input type="button" class="btn btn-success" value="Submissions" onclick="location.href = 'http:\\www.google.com';"></span>
+        
+        <button style="float:right;" type="button" class="btn btn-success"><a href="@Url.Action("Problem", "Submission", new {problemId = Model.Id})"><font color="white">Submissions</font></a></button>
 </h>
 
 <hr/>

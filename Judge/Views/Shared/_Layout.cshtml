@@ -22,9 +22,9 @@
 
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li>@Html.ActionLink("Home", "Index", "Home", new { @class = "menu-font" })</li>
-                <li>@Html.ActionLink("About", "About", "Home", new { @class = "menu-font" })</li>
-                <li>@Html.ActionLink("Contact", "Contact", "Home", new { @class = "menu-font" })</li>
+                <li>@Html.ActionLink("Home", "Index", "Home", new { @class = "menu-font" }, null)</li>
+                <li>@Html.ActionLink("Problems", "Index", "Problem", new { @class = "menu-font" }, null)</li>
+                <li>@Html.ActionLink("Contact", "Contact", "Home", new { @class = "menu-font" }, null)</li>
             </ul>
             @Html.Partial("_LoginPartial")
         </div>
@@ -42,10 +42,6 @@
 <footer>
     <div class="container">
         @RenderBody()
-
-        <div class="footer-pos">
-            &copy; @DateTime.Now.Year - Online Judge
-        </div>
 
     </div>
 </footer>

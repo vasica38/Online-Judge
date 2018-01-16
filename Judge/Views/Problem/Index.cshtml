@@ -23,7 +23,17 @@
 <br/>
 <div class ="container">
 <table class="table table-striped">
-   
+    <tr>
+        <th>
+            Problem Name
+        </th>
+
+        <th>
+            Author
+        </th>
+        <th></th>
+
+    </tr>
 
 @foreach (var item in Model) {
     <tr>
@@ -32,7 +42,13 @@
                 
                 <a href="@Url.Action("Details", "Problem", new {id = @Html.DisplayFor(modelItem => item.Id)})"><font color="#00cc00"> @Html.DisplayFor(modelItem => item.Name)</font></a>
             </font>
-            <div align="right" >
+
+        </td>
+        <td>
+            lol
+        </td>
+        <td>
+            <div align="right">
                 <button type="button" class="btn btn-success btn-sm"><a href="@Url.Action("Details", "Problem", new { id =  @Html.DisplayFor(modelItem => item.Id) })"> <font color="white">Solve Challenge</font></a></button>
             </div>
         </td>
