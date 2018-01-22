@@ -106,8 +106,7 @@ namespace Judge.Controllers
             return View();
         }
 
-        //
-        // POST: /Manage/AddPhoneNumber
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> AddPhoneNumber(AddPhoneNumberViewModel model)
@@ -116,7 +115,6 @@ namespace Judge.Controllers
             {
                 return View(model);
             }
-            // Generate the token and send it
             var code = await UserManager.GenerateChangePhoneNumberTokenAsync(User.Identity.GetUserId(), model.Number);
             if (UserManager.SmsService != null)
             {

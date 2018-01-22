@@ -62,8 +62,8 @@ namespace Server
                 if (compiler.Compile(submissionsPaths[submission.Id], out executablePath))
                 {
                     Console.WriteLine("Source successfully compiled");
-                    testsFolder = @"b:\tests\adunare";
-                    File.Copy(executablePath, @"b:\tests\adunare\a.exe", true);
+                    testsFolder = @"b:\tests\";
+                    File.Copy(executablePath, @"b:\tests\a.exe", true);
 
 
                     foreach(var test in repository.Tests)
